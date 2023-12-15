@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,700;1,400;1,700&family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  .dark{
+    @apply bg-main;
+  }
+  .lite{
+    @apply bg-lite;
+  }
+  html {
+    @apply w-full;
+    @apply h-full;
+  }
+  body {
+    @apply font-raleway;
+    @apply w-full;
+    @apply h-full;
+  }
+  #root {
+    @apply h-full;
+  }
+}
