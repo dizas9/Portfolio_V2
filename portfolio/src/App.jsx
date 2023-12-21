@@ -8,11 +8,11 @@ function App() {
   const Mode = useContext(ThemeContext);
   const {darkMode} = Mode;
   return (
-    <>
+    
       <body className={`${!darkMode ? "bg-lite" : "bg-main"}`}>
         <Header />
       </body>
-    </>
+    
   );
 }
 
