@@ -11,10 +11,11 @@ function App() {
   const {darkMode} = Mode;
   return (
     
-      <body className={`${!darkMode ? "bg-lite" : "bg-main"} flex flex-col`}>
+      <body className={`${!darkMode ? "bg-lite" : "bg-main"} flex flex-col h-[1000vh]`}>
         <Header />
         <DarkThemeToggle/>
         <Hero/>
+        <div className="h-screen bg-sectionLite mx-2"></div>
       </body>
     
   );
