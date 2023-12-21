@@ -1,55 +1,35 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../App.css";
 import { ThemeContext } from "../../context/themeContext";
-import { motion} from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 
 export default function Logo() {
-  const [enter, setEnter] = useState(true);
   const Mode = useContext(ThemeContext);
   const { darkMode } = Mode;
 
-  setTimeout(() => {
-    setEnter(false);
-  }, 1000);
-
-  const sequenceVariants = {
-    start: {
-      opacity: [0, 0, 0,0.1],
-      x: 0,
-      transition: {
-        delay: 1,
-      },
-    },
-    enter: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        ease: "easeOut",
-      },
-    },
-    rotate: {
-      opacity: 1,
-      rotateY: [0, 30, 60, 90, 180, 360],
-      transition: {
-        type: "spring",
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 1.5,
-        delay:1,
-        ease: "easeIn",
-      },
-    },
-  };
+  const controls = useAnimationControls();
+  useEffect(() => {
+    async function LogoAnimation() {
+      await controls.start({ x: -100, opacity: 0 });
+      await controls.start(
+        { x: 0, opacity: 1 },
+        { duration: 1, type: "spring" }
+      );
+      await controls.start(
+        { rotateY: [0, 30, 60, 90, 180, 360] },
+        { type: "spring", repeat: Infinity, repeatDelay: 1.5 }
+      );
+    }
+    LogoAnimation();
+  }, [controls]);
 
   return (
     <motion.div
       className={`lg:text-4xl text-3xl font-bold ${
         !darkMode ? "text-highlightLite" : "text-highlightDark"
       }`}
-      variants={sequenceVariants}
-      initial="start"
-      animate={enter ? "enter" : "rotate"}
+      initial={{ opacity: 0 }}
+      animate={controls}
     >
       <span className="">&lt;</span>
       <span>Sazid</span>
