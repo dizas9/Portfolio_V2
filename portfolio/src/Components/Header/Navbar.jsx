@@ -81,12 +81,13 @@ export default function Navbar({ clickEvent, menuClickHandler }) {
             return (
               <motion.li
                 className=""
-                key={index}
+                key={item.key}
                 variants={LiVariants}
                 initial="start"
                 animate="visible"
+                onClick={menuClickHandler}
               >
-                <a href={item.id}>{item.name}</a>
+                <a href={item.href}>{item.name}</a>
               </motion.li>
             );
           })}

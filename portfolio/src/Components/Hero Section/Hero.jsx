@@ -21,6 +21,9 @@ export default function Hero() {
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.2]);
+  const position = useTransform(scrollYProgress, (pos) => {
+    return pos === 1 ? "absolute" : "fixed";
+  });
 
   const controls = useAnimationControls();
   useEffect(() => {
@@ -37,8 +40,10 @@ export default function Hero() {
   return (
     <motion.div
       ref={ref}
-      style={({ opacity, scale })}
-      className={`relative flex flex-col lg:flex-row items-center justify-center gap-28 lg:gap-20 xl:gap-10 lg:mx-10 xl:mx-56 h-screen `}
+      style={{ opacity, scale,  position }}
+      className={`absolute flex flex-col lg:flex-row items-center justify-center gap-28 lg:gap-20 xl:gap-10 lg:mx-10 xl:mx-56 h-screen`
+    }
+    id="/"
     >
       <motion.img
         src="image/profile.jpg"

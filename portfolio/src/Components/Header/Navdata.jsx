@@ -1,17 +1,22 @@
 export const Navdata = [
   {
+    key: 1,
+    name: "About",
+    href:"#about",
+    id: "about",
+  },
+  {
+    key: 2,
     name: "Skill",
     id: "#skill",
   },
   {
-    name: "About",
-    id: "#about",
-  },
-  {
+    key: 3,
     name: "Project",
     id: "#project",
   },
   {
+    key: 4,
     name: "Contact",
     id: "#contact",
   },
