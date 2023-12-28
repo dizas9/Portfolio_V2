@@ -1,14 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
-import { ThemeContext } from "../../context/themeContext";
 
 export default function Header() {
   const [clickEvent, setClickEvent] = useState(false);
-  const Mode = useContext(ThemeContext);
-  const { darkMode } = Mode;
   function menuClickHandler() {
     setClickEvent((prevState) => !prevState);
   }
@@ -21,7 +18,7 @@ export default function Header() {
     visible: {
       rotateX: 0,
       opacity: 1,
-      
+
       transition: {
         duration: 0.8,
         type: "spring",
@@ -38,7 +35,7 @@ export default function Header() {
       x: 0,
       opcity: 1,
       transition: {
-        duration:1,
+        duration: 1,
         type: "spring",
       },
     },
@@ -62,11 +59,7 @@ export default function Header() {
           animate="visible"
           onClick={menuClickHandler}
         >
-          <img
-            src={!darkMode ? "/image/burgerLite.svg" : "/image/burgerDark.svg"}
-            alt=""
-            className="w-7 lg:hidden"
-          />
+          <img src="/image/burgerDark.svg" alt="" className="w-7 lg:hidden" />
         </motion.button>
       </motion.div>
     </>

@@ -2,13 +2,14 @@ export const Navdata = [
   {
     key: 1,
     name: "About",
-    href:"#about",
+    href: "#about",
     id: "about",
   },
   {
     key: 2,
     name: "Skill",
-    id: "#skill",
+    href: "#skill",
+    id: "skill",
   },
   {
     key: 3,

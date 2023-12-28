@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
-import DarkThemeToggle from "../../utils/DarkThemeToggle";
+import React from "react";
 import { Navdata } from "./Navdata";
-import { ThemeContext } from "../../context/themeContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ clickEvent, menuClickHandler }) {
-  const Mode = useContext(ThemeContext);
-  const { darkMode } = Mode;
-
   const ParentVariant = {
     start: {
       opacity: 0,
@@ -67,16 +62,19 @@ export default function Navbar({ clickEvent, menuClickHandler }) {
           key={clickEvent}
           className={
             !clickEvent
-              ? `lg:flex flex-wrap justify-start items-center gap-20 text-xl font-semibold ${
-                  !darkMode ? "text-textLite" : "text-textDark"
-                } `
+              ? `lg:flex flex-wrap justify-start items-center gap-20 text-xl font-semibold text-textDark `
               : `flex flex-col items-start gap-5 font-medium text-xl text-sectionLite pl-5 absolute top-20 left-0 h-screen bg-sectionDark  w-screen`
           }
           variants={!clickEvent ? null : toggleMenuVariants}
           initial="start"
           animate={clickEvent ? "visible" : "exit"}
         >
-          <button onClick={menuClickHandler} className="lg:hidden absolute right-2">close</button>
+          <button
+            onClick={menuClickHandler}
+            className="lg:hidden absolute right-2"
+          >
+            close
+          </button>
           {Navdata.map((item, index) => {
             return (
               <motion.li
@@ -92,8 +90,6 @@ export default function Navbar({ clickEvent, menuClickHandler }) {
             );
           })}
         </motion.ul>
-
-        {/* <DarkThemeToggle /> */}
       </motion.div>
     </AnimatePresence>
   );

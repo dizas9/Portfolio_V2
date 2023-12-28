@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, {  useEffect, useRef } from "react";
 import "../../App.css";
-import { ThemeContext } from "../../context/themeContext";
 import {
   motion,
   useScroll,
@@ -9,9 +8,6 @@ import {
 } from "framer-motion";
 
 export default function Hero() {
-  const Mode = useContext(ThemeContext);
-  const { darkMode, toggleDarkMode } = Mode;
-
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -40,10 +36,9 @@ export default function Hero() {
   return (
     <motion.div
       ref={ref}
-      style={{ opacity, scale,  position }}
-      className={`absolute flex flex-col lg:flex-row items-center justify-center gap-28 lg:gap-20 xl:gap-10 lg:mx-10 xl:mx-56 h-screen`
-    }
-    id="/"
+      style={{ opacity, scale, position }}
+      className={`absolute flex flex-col lg:flex-row items-center justify-center gap-28 lg:gap-20 xl:gap-10 lg:mx-10 xl:mx-56 h-screen`}
+      id="/"
     >
       <motion.img
         src="image/profile.jpg"
@@ -53,29 +48,15 @@ export default function Hero() {
         animate={controls}
       />
       <motion.div
-        className={`flex flex-col items-center justify-center text-xl lg:text-3xl xl:text-4xl font-thin  ${
-          !darkMode ? "text-textLite" : "text-textDark"
+        className={`flex flex-col items-center justify-center text-xl lg:text-3xl xl:text-4xl font-thin text-textDark
         }`}
         initial={{ y: 500, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <p className="">
-          I'm{" "}
-          <span
-            className={`${
-              !darkMode ? "text-textLite" : "text-textDark"
-            } font-bold`}
-          >
-            {" "}
-            Sazidul Islam{" "}
-          </span>
-          ,{" "}
-          <span
-            className={`${
-              !darkMode ? "text-highlightLite" : "text-highlightDark"
-            } font-bold`}
-          >
+          I'm <span className={`text-textLitefont-bold`}> Sazidul Islam </span>,{" "}
+          <span className={`text-highlightDark font-bold`}>
             Front End Developer
           </span>
         </p>
