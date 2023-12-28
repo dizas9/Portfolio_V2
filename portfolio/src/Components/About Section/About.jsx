@@ -30,10 +30,10 @@ export default function About({ title, id }) {
       </p>
       {scrollY >= 400 && (
         <motion.div
-          className="h-fit w-[20rem] lg:w-[60rem] xl:w-[95rem] lg:py-10 py-5 outline-double outline-lite rounded-3xl lg:my-10 xl:my-56"
+          className="h-fit w-[20rem] lg:w-[60rem] xl:w-[60rem] lg:py-10 py-5 outline-double outline-lite rounded-3xl lg:my-10"
           initial={{ scale: 0 }}
           animate={
-            scrollY > 820
+            (scrollY > 750 || scrollY > 850)
               ? {
                   scale: 0,
                   opacity: [0.5, 0.1, 0],
