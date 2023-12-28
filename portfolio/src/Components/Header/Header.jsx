@@ -44,7 +44,7 @@ export default function Header() {
   return (
     <>
       <motion.div
-        className="flex xl:mx-52 lg:mx-0 px-10 py-5 justify-between items-center border-b-[0.01rem] border-[#88807B] fixed right-0 left-0 bg-sectionDark z-10"
+        className="flex xl:mx-52 lg:mx-0 px-10 py-5 justify-between items-center border-b-[0.01rem] border-[#88807B] right-0 left-0 bg-sectionDark z-10"
         variants={HeaderVariant}
         initial="hidden"
         animate="visible"
