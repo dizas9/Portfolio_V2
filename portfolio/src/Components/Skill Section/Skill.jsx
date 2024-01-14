@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { skillSet1, skillSet2 } from "./SkilData";
+import { useScroll } from "../../hooks/useScroll";
 
 export default function Skill({ title, id }) {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollY]);
+  const { scrollY } = useScroll(0);
   return (
     <div
-      className={`w-screen h-fit absolute top-[150vh] lg:top-[150vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-fit absolute top-[150vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 1024 && (

@@ -14,7 +14,8 @@ export const Navdata = [
   {
     key: 3,
     name: "Project",
-    id: "#project",
+    href: "#project",
+    id: "project",
   },
   {
     key: 4,

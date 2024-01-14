@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.css";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
@@ -6,6 +6,17 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   const [clickEvent, setClickEvent] = useState(false);
+  const [mobileMode, setMobileMode] = useState(false);
+  useEffect(() => {
+    function handleMobileMode() {
+      if (window.innerWidth < 1280) {
+        setMobileMode(true);
+      } else {
+        setMobileMode(false);
+      }
+    }
+    handleMobileMode();
+  }, [mobileMode ,window]);
   function menuClickHandler() {
     setClickEvent((prevState) => !prevState);
   }
@@ -51,7 +62,11 @@ export default function Header() {
         debug
       >
         <Logo />
-        <Navbar clickEvent={clickEvent} menuClickHandler={menuClickHandler} />
+        <Navbar
+          clickEvent={clickEvent}
+          menuClickHandler={menuClickHandler}
+          mobileMode={mobileMode}
+        />
         <motion.button
           className=""
           variants={MenuVariants}

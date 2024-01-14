@@ -2,7 +2,12 @@ import React from "react";
 import { Navdata } from "./Navdata";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Navbar({ clickEvent, menuClickHandler }) {
+export default function Navbar({
+  clickEvent,
+  menuClickHandler,
+  mobileMode,
+  handleMobileMode,
+}) {
   const ParentVariant = {
     start: {
       opacity: 0,
@@ -49,7 +54,7 @@ export default function Navbar({ clickEvent, menuClickHandler }) {
       },
     },
   };
-
+  console.log("mode", mobileMode);
   return (
     <AnimatePresence>
       <motion.div
@@ -59,7 +64,6 @@ export default function Navbar({ clickEvent, menuClickHandler }) {
         animate="visible"
       >
         <motion.ul
-          key={clickEvent}
           className={
             !clickEvent
               ? `lg:flex flex-wrap justify-start items-center gap-20 text-xl font-semibold text-textDark `
