@@ -17,7 +17,7 @@ export default function Project({ title, id }) {
 
   return (
     <div
-      className={`w-screen h-fit absolute top-[260vh] xl:top-[250vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-fit absolute top-[200vh] xl:top-[230vh] lg:top-[255vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 1810 && (

@@ -13,7 +13,7 @@ export default function About({ title, id }) {
   return (
     <div
       id={id}
-      className={`h-fit absolute w-screen top-[100vh] flex flex-col justify-center items-center`}
+      className={`h-fit absolute w-screen top-[90vh] flex flex-col justify-center items-center`}
     >
       {scrollY >= 424 && (
         <motion.p

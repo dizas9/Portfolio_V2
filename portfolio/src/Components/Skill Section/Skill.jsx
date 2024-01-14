@@ -7,7 +7,7 @@ export default function Skill({ title, id }) {
   const { scrollY } = useScroll(0);
   return (
     <div
-      className={`w-screen h-fit absolute top-[150vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-fit absolute top-[120vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 1024 && (
@@ -21,7 +21,7 @@ export default function Skill({ title, id }) {
             {title}
           </motion.p>
           <motion.div
-            className={`h-fit w-[20rem] lg:w-[60rem] xl:w-[60rem] lg:py-10 py-5 lg:px-36 outline-double outline-lite rounded-3xl flex lg:flex-col lg:justify-between`}
+            className={`h-fit w-[20rem] lg:w-[60rem] xl:w-[60rem] lg:py-10 py-5 lg:px-20 outline-double outline-lite rounded-3xl flex lg:flex-col lg:justify-between`}
             initial={{ scale: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, type: "spring", delay: 0.5 }}
