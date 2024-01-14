@@ -15,8 +15,22 @@ export default function Header() {
         setMobileMode(false);
       }
     }
-    handleMobileMode();
-  }, [mobileMode ,window]);
+
+    handleMobileMode(); // Initial check
+
+    // Add event listener for window resize
+    const handleResize = () => {
+      handleMobileMode();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // Cleanup: remove event listener on component unmount
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array, so it runs only once on mount
+
   function menuClickHandler() {
     setClickEvent((prevState) => !prevState);
   }

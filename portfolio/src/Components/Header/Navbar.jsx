@@ -65,11 +65,11 @@ export default function Navbar({
       >
         <motion.ul
           className={
-            !clickEvent
+            !mobileMode
               ? `lg:flex flex-wrap justify-start items-center gap-20 text-xl font-semibold text-textDark `
-              : `flex flex-col items-start gap-5 font-medium text-xl text-sectionLite pl-5 absolute top-20 left-0 h-screen bg-sectionDark  w-screen`
+              : `flex flex-col items-start gap-5 font-medium text-xl text-sectionLite pl-5 absolute top-20 left-0 h-screen bg-sectionDark  w-screen lg:hidden`
           }
-          variants={!clickEvent ? null : toggleMenuVariants}
+          variants={!mobileMode ? null : toggleMenuVariants}
           initial="start"
           animate={clickEvent ? "visible" : "exit"}
         >
