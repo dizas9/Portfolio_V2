@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../../App.css";
 import {
   motion,
@@ -43,12 +43,12 @@ export default function Hero() {
       <motion.img
         src="image/profile.jpg"
         alt=""
-        className={`w-[300px] lg:w-[400px] xl:w-[450px] rounded-full mt-[-9.5rem] border-2 outline outline-8 outline-offset-4 outline-lite `}
+        className={`w-[300px] lg:w-[400px] xl:w-[450px] rounded-full mt-[40%] lg:mt-[10%] border-2 outline outline-8 outline-offset-4 outline-lite `}
         initial={{ opacity: 0 }}
         animate={controls}
       />
       <motion.div
-        className={`flex flex-col items-center justify-center text-xl lg:mt-[-9.5rem] lg:text-3xl xl:text-4xl font-thin text-textDark
+        className={`flex flex-col items-center justify-center text-xl lg:mt-[10%] lg:text-3xl xl:text-4xl font-thin text-textDark
         }`}
         initial={{ y: 500, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

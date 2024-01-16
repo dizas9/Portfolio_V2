@@ -8,7 +8,7 @@ export default function Contact({ title, id }) {
 
   return (
     <div
-      className={`w-screen h-fit absolute top-[280vh] lg:top-[350vh] xl:top-[310vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-screen absolute top-[280vh] lg:top-[350vh] xl:top-[300vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 2340 && (
@@ -55,10 +55,11 @@ export default function Contact({ title, id }) {
                   LinkedIn
                 </p>
                 <a
-                  className="text-[white] lg:text-xl"
+                  className="text-[white] lg:text-xl flex items-center gap-1"
                   href="https://www.linkedin.com/in/dizas9/"
                 >
-                  linkedin.com/in/dizas9
+                  <p className="text-highlightDark">click here</p>
+                  <img src="image/goto.png" alt="" className="w-7" />
                 </a>
               </div>
             </motion.div>
@@ -79,10 +80,10 @@ export default function Contact({ title, id }) {
                   Github
                 </p>
                 <a
-                  className="text-[white] lg:text-xl flex items-center"
+                  className="text-[white] lg:text-xl flex items-center gap-1"
                   href="https://github.com/dizas9"
                 >
-                  <p className="">click here</p>
+                  <p className="text-highlightDark">click here</p>
                   <img src="image/goto.png" alt="" className="w-7" />
                 </a>
               </div>
