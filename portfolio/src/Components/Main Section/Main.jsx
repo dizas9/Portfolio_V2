@@ -4,8 +4,11 @@ import Hero from "../Hero Section/Hero";
 import About from "../About Section/About";
 import Skill from "../Skill Section/Skill";
 import Project from "../Project Section/Project";
+import Contact from "../Contact Section/Contact";
 
 export default function Main() {
+
+  
 
   return (
     <div className="flex flex-col">
@@ -13,6 +16,7 @@ export default function Main() {
       <About title={Navdata[0].name} id={Navdata[0].id} />
       <Skill title={Navdata[1].name} id={Navdata[1].id} />
       <Project title={Navdata[2].name} id={Navdata[2].id} />
+      <Contact title={Navdata[3].name} id={Navdata[3].id} />
     </div>
   );
 }

@@ -20,6 +20,7 @@ export const Navdata = [
   {
     key: 4,
     name: "Contact",
-    id: "#contact",
+    href: "#contact",
+    id: "contact",
   },
 ];

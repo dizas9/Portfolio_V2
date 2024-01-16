@@ -43,6 +43,10 @@ export const ProjectData = [
         detail:
           "Utilizing JavaScript local storage to enhance state management, to providing seamless user experience and efficient data persistence in the project.",
       },
+      {
+        detail:
+          "I employed React Router Navigation to seamlessly manage and transfer path history data, ensuring smooth communication between components, with a focus on maintaining values and states cohesively.",
+      },
     ],
     links: [
       { link: "https://github.com/dizas9/FunQuizz", name: "Code Base" },

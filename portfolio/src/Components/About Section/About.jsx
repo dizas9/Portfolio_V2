@@ -4,8 +4,8 @@ import { infodata, currentLearning, guidingPrincipl } from "./Infodata";
 import { useScroll } from "../../hooks/useScroll";
 export default function About({ title, id }) {
   const { scrollY } = useScroll(0);
-  console.log(window.scrollY);
   console.log("sc", scrollY);
+  console.log("Top", window.innerHeight);
   if (scrollY > 500) {
     console.log("exits 500", scrollY);
   }
