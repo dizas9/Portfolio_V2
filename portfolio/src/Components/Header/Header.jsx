@@ -90,6 +90,7 @@ export default function Header() {
         >
           <img src="/image/burgerDark.svg" alt="" className="w-7 lg:hidden" />
         </motion.button>
+
       </motion.div>
     </>
   );

@@ -21,6 +21,7 @@ export const ProjectData = [
     links: [
       { link: "https://github.com/dizas9/Portfolio_V2", name: "Code Base" },
       { link: "https://portfolio-v2-sazid.vercel.app/", name: "Demo" },
+      { link: "https://sazid-portfolio-96.vercel.app/", name: "Old Version" },
     ],
     thumbnail: "image/project1.png",
   },

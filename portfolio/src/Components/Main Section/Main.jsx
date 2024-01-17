@@ -11,7 +11,7 @@ export default function Main() {
   
 
   return (
-    <div className="flex flex-col h-[412vh] lg:h-[500vh] xl:h-[450vh] bg-main">
+    <div className="flex flex-col h-[413vh] lg:h-[500vh] xl:h-[450vh] bg-main">
       <Hero />
       <About title={Navdata[0].name} id={Navdata[0].id} />
       <Skill title={Navdata[1].name} id={Navdata[1].id} />

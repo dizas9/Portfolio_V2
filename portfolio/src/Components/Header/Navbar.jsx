@@ -54,6 +54,28 @@ export default function Navbar({
       },
     },
   };
+
+  const oldSiteVariants = {
+    start: {
+      scale: 0,
+    },
+    visible: {
+      scale: 1,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+        type: "spring",
+      },
+    },
+    deskvisible: {
+      scale: 1,
+      transition: {
+        duration: 1,
+        delay: 1.5,
+        type: "spring",
+      },
+    },
+  };
   console.log("mode", mobileMode);
   return (
     <AnimatePresence>
@@ -75,9 +97,9 @@ export default function Navbar({
         >
           <button
             onClick={menuClickHandler}
-            className="lg:hidden absolute right-2"
+            className="lg:hidden absolute right-7 top-2"
           >
-            close
+            <img src="image/icons8-cross-70.png" alt="" className="w-7" />
           </button>
           {Navdata.map((item, index) => {
             return (
@@ -94,6 +116,18 @@ export default function Navbar({
             );
           })}
         </motion.ul>
+        <motion.div
+          className={
+            !mobileMode
+              ? "lg:absolute right-5 bottom-2 text-sm font-thin text-highlightDark"
+              : "absolute left-5 bottom-[-14rem] text-sm font-bold text-highlightDark"
+          }
+          variants={oldSiteVariants}
+          initial="start"
+          animate={clickEvent ? "visible" : !mobileMode ? "deskvisible" : ""}
+        >
+          <a href="https://sazid-portfolio-96.vercel.app/">Old Version ?</a>
+        </motion.div>
       </motion.div>
     </AnimatePresence>
   );

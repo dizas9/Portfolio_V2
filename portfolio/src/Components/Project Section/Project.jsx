@@ -99,7 +99,7 @@ export default function Project({ title, id }) {
                   </ul>
                 </details>
                 <div className="flex gap-5 ">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
                     {selectedProject.links.map((link, linkIndex) => (
                       <>
                         <a
