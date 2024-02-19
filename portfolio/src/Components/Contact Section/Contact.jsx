@@ -8,7 +8,7 @@ export default function Contact({ title, id }) {
 
   return (
     <div
-      className={`w-screen h-screen absolute top-[280vh] lg:top-[350vh] xl:top-[300vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-screen absolute top-[330vh] lg:top-[350vh] xl:top-[300vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 2340 && (

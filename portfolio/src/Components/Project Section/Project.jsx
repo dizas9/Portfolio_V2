@@ -17,7 +17,7 @@ export default function Project({ title, id }) {
 
   return (
     <div
-      className={`w-screen h-screen absolute top-[200vh] xl:top-[200vh] lg:top-[255vh] flex flex-col justify-center items-center my-72`}
+      className={`w-screen h-screen absolute top-[220vh] xl:top-[200vh] lg:top-[255vh] flex flex-col justify-center items-center my-72`}
       id={id}
     >
       {scrollY >= 1810 && (
@@ -33,7 +33,7 @@ export default function Project({ title, id }) {
           <div className="flex flex-col lg:flex-row lg:flex-wrap h-fit lg:w-[70%] justify-between gap-10">
             {ProjectData.map((project, projectIndex) => (
               <motion.div
-                className="h-[20vh] lg:h-[30vh] w-[85vw] lg:w-[30vw] flex flex-col justify-center items-center relative"
+                className="h-[15vh] lg:h-[30vh] w-[85vw] lg:w-[30vw] flex flex-col justify-center items-center relative"
                 key={projectIndex}
                 initial={{ x: projectIndex % 2 === 0 ? 100 : -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -43,10 +43,14 @@ export default function Project({ title, id }) {
                   <img
                     src={project.thumbnail}
                     alt="Project IMg"
-                    className="object-fill border-2 border-[white] p-3 w-full h-full rounded-md"
+                    className={`object-fill transition hover:object-cover border-2 border-[white] p-3 w-full h-full rounded-md`}
                   />
                 </div>
-                <p className="absolute bottom-3 left-3 text-lite font-semibold">
+                <p
+                  className={`absolute bottom-3 left-5 ${
+                    projectIndex === 2 || projectIndex === 3 ? "text-[blue]" : "text-lite"
+                  } font-semibold`}
+                >
                   {project.title}
                 </p>
                 <button
@@ -109,11 +113,7 @@ export default function Project({ title, id }) {
                         >
                           {link.name}
                         </a>
-                        <img
-                          src="image/goto.png"
-                          alt=""
-                          className="w-7"
-                        />
+                        <img src="image/goto.png" alt="" className="w-7" />
                       </>
                     ))}
                   </div>

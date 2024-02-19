@@ -20,12 +20,24 @@ export const skillSet1 = [
     name: "Tailwind CSS",
     src: "image/icons8-tailwind-css.svg",
   },
+  {
+    name: "Material UI",
+    src: "image/mui.png",
+  },
+  {
+    name: "Jest",
+    src: "image/jest.png",
+  },
 ];
 
 export const skillSet2 = [
   {
     name: "Git",
     src: "image/git.png",
+  },
+  {
+    name: "Next JS",
+    src: "image/icons8-nextjs.svg",
   },
   {
     name: "React Router",

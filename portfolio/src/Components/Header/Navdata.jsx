@@ -7,19 +7,19 @@ export const Navdata = [
   },
   {
     key: 2,
-    name: "Skill",
+    name: "Skills",
     href: "#skill",
     id: "skill",
   },
   {
     key: 3,
-    name: "Project",
+    name: "Projects",
     href: "#project",
     id: "project",
   },
   {
     key: 4,
-    name: "Contact",
+    name: "Contacts",
     href: "#contact",
     id: "contact",
   },

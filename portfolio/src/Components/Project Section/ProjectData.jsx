@@ -55,4 +55,67 @@ export const ProjectData = [
     ],
     thumbnail: "image/project2.png",
   },
+
+  {
+    title: "News Portal website",
+    technology: [
+      { name: "JavaScript" },
+      { name: "PHP" },
+      { name: "Blade" },
+      { name: "Vue" },
+      { name: "Admin LTE 3.0" },
+      { name: "MySQl" },
+    ],
+    description:
+      "This project I created for my academic coursework, utilizes Laravel framework, Blade templating, MySQL Server, and AdminLTE3 control panel. It intruduced me professional-grade web development skills, offering an educational showcase of modern tools and techniques for building dynamic web applications.",
+    details: [
+      {
+        detail:
+          "This project sparked my passion for web technology, offering firsthand exposure to various tools including PHP, Git version control, JavaScript, and PHP server. Through hands-on experience, I cultivated a deep understanding of these technologies, laying a solid foundation for professional development in the field.",
+      },
+      {
+        detail:
+          "By Vue.js, I gained firsthand expertise in frontend JavaScript UI technology, elevating my understanding of modern web development practices. This experience enabled me to create dynamic and responsive user interfaces efficiently.",
+      },
+      {
+        detail:
+          "I gained proficiency in handling dynamic data flow between frontend and backend systems for seamless communication and interaction in web applications.",
+      },
+      {
+        detail:
+          "Utilizing AdminLTE, the premier open-source admin dashboard and control panel theme, I gained comprehensive control over website content. Transforming static sites into dynamic, interactive platforms, I learned to enhance user engagement and optimize website functionality effectively.",
+      },
+    ],
+    links: [
+      { link: "https://github.com/dizas9/laranews", name: "Code Base" },
+      {
+        link: "https://docs.google.com/presentation/d/1u5KNMrtCJxm8oJMLn9D4wDDz32cB7lRO/edit#slide=id.p1",
+        name: "Demo",
+      },
+    ],
+    thumbnail: "image/project3.png",
+  },
+
+  {
+    title: "Restaurant Landing Page",
+    technology: [
+      { name: "JavaScript" },
+      { name: "Figma" },
+      { name: "Tailwind CSS" },
+      { name: "Vite" },
+    ],
+    description:
+      "Engaged in developing a Restaurant Landing Page from a Figma prototype.",
+    details: [
+      {
+        detail:
+          "Following Figma design, I transformed it into ReactJS, leveraging React's data flow and code reusability capabilities, enhancing development efficiency and scalability",
+      },
+    ],
+    links: [
+      { link: "https://github.com/dizas9/pgFresh", name: "Code Base" },
+      { link: "https://pg-fresh-giozwdcfa-dizas9.vercel.app/", name: "Demo" },
+    ],
+    thumbnail: "image/project4.png",
+  },
 ];
