@@ -4,6 +4,7 @@ export const infodata = {
 
 export const accordionMenuData = [
   {
+    id: 1,
     header: "Currently I'm Learning",
     data: [
       {
@@ -21,6 +22,7 @@ export const accordionMenuData = [
     ],
   },
   {
+    id: 2,
     header: "My Guiding Principles",
     data: [
       {

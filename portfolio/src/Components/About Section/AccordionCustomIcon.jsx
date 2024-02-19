@@ -15,23 +15,23 @@ export default function AccordionCustomIcon() {
   return (
     <>
       {accordionMenuData.map((item, itemIndex) => (
-        <div id={itemIndex} className="rounded-lg  mb-2 mt-2">
+        <div id={item.id} className="rounded-lg  mb-2 mt-2">
           <div className="border-b rounded-lg border-b-lite mx-5">
             <h2 className="mb-0">
               <button
                 className={`${
-                  activeElement === itemIndex &&
+                  activeElement === item.id &&
                   `text-highlightDark [box-shadow:inset_0_-1px_0_rgba(229,231,235)]`
                 } group relative flex w-full items-center border-0 bg-sectionDark rounded-lg px-5 py-4 text-left text-base lg:text-2xl text-lite transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none`}
                 type="button"
-                onClick={() => handleClick(itemIndex)}
+                onClick={() => handleClick(item.id)}
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
                 {item.header}
                 <span
                   className={`${
-                    activeElement === itemIndex
+                    activeElement === item.id
                       ? `rotate-[-180deg] -mr-1`
                       : `rotate-0 fill-[#212529]  dark:fill-white`
                   } ml-auto h-5 w-5 shrink-0 fill-[#336dec] transition-transform duration-200 ease-in-out motion-reduce:transition-none dark:fill-blue-300`}
@@ -55,7 +55,7 @@ export default function AccordionCustomIcon() {
             </h2>
             {item.data.map((subItem, subItemIndex) => (
               <TECollapse
-                show={activeElement === itemIndex}
+                show={activeElement === item.id}
                 className="!mt-0 !rounded-b-none !shadow-none"
               >
                 <div
